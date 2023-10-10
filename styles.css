@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: aliceblue;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  padding: 2rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  margin: 3rem 6rem;
+  color: rgb(6, 6, 120);
+  font-weight: 900;
+  border-bottom: 0.2rem solid rgb(51, 255, 231);
+  width: 20%;
+  letter-spacing: 0.5rem;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck-container {
+  position: relative;
+  height: 18rem;
+  width: 70%;
+}
+
+.deck-item {
+  border-radius: 10px;
+  height: 18rem;
+  width: 12.5rem;
+  border: 8px solid rgb(6, 6, 109);
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.deck-item > span {
+  color: rgb(16, 255, 211);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.deck-1 {
+  position: absolute;
+  left: 45%;
+  transform: translateX(-50%);
+  transition: 1s ease-in-out;
+  z-index: 2;
+}
+.deck-2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.deck-3 {
+  position: absolute;
+  z-index: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  transition: 1s ease-in-out;
+}
+
+.deck-container:hover .deck-1 {
+  left: 0;
+  transform: translateX(0);
+}
+.deck-container:hover .deck-3 {
+  left: 100%;
+  transform: translateX(-100%);
+}
