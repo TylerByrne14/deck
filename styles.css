@@ -37,52 +37,25 @@ h2 {
   position: relative;
   height: 18rem;
   width: 70%;
+  text-align: center;
 }
 
 .deck-item {
   border-radius: 10px;
   height: 18rem;
-  width: 12.5rem;
+  width: 12.5vw;
   border: 8px solid rgb(6, 6, 109);
   background-color: white;
   display: flex;
   justify-content: end;
   padding: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  transition: 1s ease-in-out;
 }
 
 .deck-item > span {
   color: rgb(16, 255, 211);
   font-size: 1.3rem;
   font-weight: bold;
-}
-
-.deck-1 {
-  position: absolute;
-  left: 45%;
-  transform: translateX(-50%);
-  transition: 1s ease-in-out;
-  z-index: 2;
-}
-.deck-2 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.deck-3 {
-  position: absolute;
-  z-index: 0;
-  left: 55%;
-  transform: translateX(-50%);
-  transition: 1s ease-in-out;
-}
-
-.deck-container:hover .deck-1 {
-  left: 0;
-  transform: translateX(0);
-}
-.deck-container:hover .deck-3 {
-  left: 100%;
-  transform: translateX(-100%);
 }
